@@ -1,0 +1,59 @@
+<body>
+
+  
+
+
+  <div class = "image">
+    <div class = "imageBox">
+      <div class = "yukiTorii" id = yuki>
+        <%=image_tag 'yukitorii1.jpg',id: 1%>
+        <%=image_tag 'yukitorii2.jpg',id: 2%>
+        <%=image_tag 'yukitorii3.jpg',id: 3%>
+      </div>
+        <%=image_tag 'buthik_1.jpg',id: 'shoues'%>
+    </div>
+  </div>
+
+
+
+
+
+  <div class = "item">
+    Blands
+      <div class = "items">
+        <div class = "oyuki">
+          YUKI TORII
+        </div>
+
+        <div class = "jion">
+          ㈱ジオン商事Chamois
+        </div>
+        </div>
+
+
+      <div class = "items">
+        <div class = "idem">
+          IDEM
+        </div>
+
+        <div class = "satto">
+          サットナーム
+        </div>
+
+        <div class = "cool">
+          クールカレアン
+
+        </div>
+    </div>
+  </div>
+
+</body>
+
+
+<script>
+$(function() {
+  $(".imageBox").not('.slick-initialized').slick({
+    autoplay:true,
+  });
+});
+</script>
