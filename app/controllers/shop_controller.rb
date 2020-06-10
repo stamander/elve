@@ -3,6 +3,8 @@ class ShopController < ApplicationController
   end
 
   def new
+    @ex= Profile.new
+    @profile.images.new
   end
 
   def show
