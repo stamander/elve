@@ -4,5 +4,5 @@ class Exhibition < ApplicationRecord
   validates :name, presence: true
   validates :price, presence: true
   validates :explain,presence: true
-  validates :mail, presence: true
+
 end
