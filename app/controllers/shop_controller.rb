@@ -13,7 +13,7 @@ class ShopController < ApplicationController
 
   private
   def exhibition_params
-    params.require(:exhibition).permit(:name,:price,images_attributes: [:src,:_destroy, :id])
+    params.require(:exhibition).permit(:name,:price,:explaon,images_attributes: [:src,:_destroy, :id])
   end
 
 end
