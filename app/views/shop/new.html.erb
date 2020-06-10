@@ -1,6 +1,6 @@
-<%= form_for @article do |f| %>
+<%= form_for @exhibition do |f| %>
 
-  <%= f.text.field :title %>
+  <%= f.text.field :name %>
 
   <%= f.fields_for :images do |image| %>
     <%= image_tag(image.object.content) %> #画像があれば表示する
