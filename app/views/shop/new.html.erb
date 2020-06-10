@@ -1,11 +1,11 @@
 <%= form_for @exhibition do |f| %>
 
+  <%= f.fields_for :images do |image| %>
+   
+    <%= image.file_field :src ,id: :profile_contents %>
   <%= f.text.field :name %>
 
-  <%= f.fields_for :images do |image| %>
-    <%= image_tag(image.object.content) %> #画像があれば表示する
-    <%= image.file_field : %>
-    <%= image.hidden_field :id, value: image.object.id %> #編集時にはidが必要らしい
+    
   <%= f.submit %>
 
 <% end %>
