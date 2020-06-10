@@ -3,8 +3,8 @@ class ShopController < ApplicationController
   end
 
   def create
-    @shop= Shop.new(shop_params)
-    if @shop.save
+    @exhibition= Exhibition.new(shop_params)
+    if @xhibition.save
       redirect_to new_shop_path
    
     else
@@ -15,7 +15,7 @@ class ShopController < ApplicationController
   end
 
   def new
-    @shop= Shop.new
+    @xhibition= Shop.new
   
   end
 
