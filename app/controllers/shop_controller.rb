@@ -10,5 +10,5 @@ class ShopController < ApplicationController
 
 
   private
-end
+
 end
