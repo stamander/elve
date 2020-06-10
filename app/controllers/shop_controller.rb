@@ -2,6 +2,18 @@ class ShopController < ApplicationController
   def index
   end
 
+  def create
+    @exhibition= Exhibition.new(exhibition_params)
+    if @exhibition.save
+      redirect_to new_shop_path
+   
+    else
+      redirect_to new_shop_path
+      
+      
+    end
+  end
+
   def new
     @exhibition= Exhibition.new
     @exhibition.images.new
