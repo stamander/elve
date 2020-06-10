@@ -3,8 +3,8 @@ class ShopController < ApplicationController
   end
 
   def new
-    @ex= Profile.new
-    @profile.images.new
+    @exhibition= Exhibition.new
+    @exhibition.images.new
   end
 
   def show
@@ -12,5 +12,8 @@ class ShopController < ApplicationController
 
 
   private
+  def exhibition_params
+    params.require(:exhibition).permit(:name,:price,images_attributes: [:src,:_destroy, :id])
+  end
 
 end
