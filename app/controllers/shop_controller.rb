@@ -2,6 +2,13 @@ class ShopController < ApplicationController
   def index
   end
 
+  def new
+    @exhibition= Exhibition.new
+
+    
+  
+  end
+
   def create
     @exhibition= Exhibition.new(exhibition_params)
     if @exhibition.save
@@ -14,12 +21,7 @@ class ShopController < ApplicationController
     end
   end
 
-  def new
-    @exhibition= Exhibition.new
-    @exhibition.images.new
-    
-  
-  end
+
 
   def show
   end
