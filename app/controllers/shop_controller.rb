@@ -5,10 +5,10 @@ class ShopController < ApplicationController
   def create
     @exhibition= Exhibition.new(shop_params)
     if @exhibition.save
-      redirect_to new_shop_path
+      redirect_to shop_index_path
    
     else
-      redirect_to new_shop_path
+      redirect_to shop_index_path
       
       
     end
