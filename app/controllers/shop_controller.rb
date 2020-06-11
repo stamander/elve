@@ -15,7 +15,7 @@ class ShopController < ApplicationController
   end
 
   def new
-    @xhibition= Shop.new
+    @exhibition= Shop.new
   
   end
 
