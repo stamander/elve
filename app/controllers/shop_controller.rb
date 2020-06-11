@@ -3,7 +3,7 @@ class ShopController < ApplicationController
   end
 
   def create
-    @exhibition= Exhibition.new(shop_params)
+    @exhibition= Exhibition.new(exhibition_params)
     if @exhibition.save
       redirect_to shop_index_path
    
@@ -26,8 +26,8 @@ class ShopController < ApplicationController
 
 
   private
-  def shop_params
-    params.require(:exhibition).permit(:name,:price,:explain,images_attributes: [:src,:_destroy, :id])
+  def exhibition_params
+    params.require(:exhibition).permit(:name,:price,:explain,images_attributes: [:src])
   end
 
 end
