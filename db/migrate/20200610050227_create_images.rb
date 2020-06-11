@@ -2,7 +2,7 @@ class CreateImages < ActiveRecord::Migration[5.2]
   def change
     create_table :images do |t|
       t.string :src,null: false
-      t.references :exhibitions, foreign_key: true
+      t.references :exhibitions
 
       t.timestamps
     end
