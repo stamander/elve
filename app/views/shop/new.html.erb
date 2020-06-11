@@ -1,4 +1,5 @@
-<%= form_for (@exhibition)  do |f| %>
+<%= form_for @exhibition,url:shop_path,local:true  do |f| %>
+
 
   <%= f.fields_for :images do |image| %>
    
