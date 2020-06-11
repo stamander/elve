@@ -1,6 +1,6 @@
 class Image < ApplicationRecord
   mount_uploader :src,ImageUploader
-  belongs_to :profile,optional: true
+  belongs_to :exhibition,optional: true
 
   validates :src, presence: true
 
