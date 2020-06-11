@@ -4,11 +4,11 @@
   <%= f.fields_for :images do |image| %>
    
     <%= image.file_field :src ,id: :profile_contents %>
-  <%= f.text.field :name %>
+  <%= f.text_field :name %>
 
-  <%= f.text.field :price %>
+  <%= f.text_field :price %>
 
-  <%= f.text.field :explain %>
+  <%= f.text_field :explain %>
 
     
   <%= f.submit %>
