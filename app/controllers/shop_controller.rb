@@ -16,6 +16,7 @@ class ShopController < ApplicationController
 
   def new
     @exhibition= Exhibition.new
+    @exhibition.images.new
     
   
   end
