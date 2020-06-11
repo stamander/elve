@@ -4,7 +4,11 @@
   <%= f.fields_for :images do |image| %>
    
     <%= image.file_field :src ,id: :profile_contents %>
+
+<div class = name>
+  商品名
   <%= f.text_field :name %>
+  </div>
 
   <%= f.text_field :price %>
 
