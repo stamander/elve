@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :message,only: :index
   resources :shop
   resources :link, only: :index
+  root 'products#index'
+  resources :products, except: :show
 end
