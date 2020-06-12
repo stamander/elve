@@ -29,5 +29,11 @@ class ProductsController < ApplicationController
   def destroy
   end
 
+  private
+
+def product_params
+  params.require(:product).permit(:name, :price,:explain images_attributes: [:src])
+end
+
 
 end
