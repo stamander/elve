@@ -1,24 +1,13 @@
-<div class="content">
-  
-  <p><%= product.price %>円</p>
-  
-  <% product.images.each do |image| %>
-    <%= image_tag image.src.url %>
-  <% end %>
-</div>
-
-
-
-
-
+<% product.images.each do |image| %>
 <div class = "title">
   shop
+
   <div class = "itemsBox">
     <div class = "clothes">
     
       <div class = "kind">
         <div class = itemImage>
-          <%=image_tag 'yukitorii1.jpg',id: 1, height: '300px',width:'250px'%>
+          <%= image_tag image.src.url %>
         </div>
         <div class = "name">
           <p><%= product.name %></p>
@@ -28,7 +17,7 @@
         </div>
 
         <div class = "price">
-          105$
+          <p><%= product.price %>円</p>
         </div>
       
       </div>
@@ -138,5 +127,6 @@
       </div>
 
     </div>
-  </div>
+    </div>
+  <% end %>
 </div>
