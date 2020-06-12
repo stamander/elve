@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.includes (:images)
+    @products = Product.includes(:images)
   end
 
  
