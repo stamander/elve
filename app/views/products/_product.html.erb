@@ -1,11 +1,12 @@
-
+<% product.images.each do |image| %>
   <div class = "title">
     shop
 
     <div class = "itemsBox">
+      
       <div class = "clothes">
         <div class = "kind">
-          <% product.images.each do |image| %>
+          
           <div class = itemImage>
             <%= image_tag image.src.url %>
           </div>
@@ -21,12 +22,14 @@
             <p><%= product.price %>円</p>
           </div>
 
-          <% end %>
+          
         
        
 
         </div>
       </div>
+      
     </div>
   
   </div>
+<% end %>
