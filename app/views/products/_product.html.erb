@@ -1,11 +1,11 @@
-<% product.images.each do |image| %>
+
   <div class = "title">
     shop
 
     <div class = "itemsBox">
       <div class = "clothes">
-      
         <div class = "kind">
+          <% product.images.each do |image| %>
           <div class = itemImage>
             <%= image_tag image.src.url %>
           </div>
@@ -20,115 +20,13 @@
           <div class = "price">
             <p><%= product.price %>円</p>
           </div>
-        
-        </div>
-        <div class = "kind">
-          <div class = itemImage>
-            <%=image_tag 'yukitorii1.jpg',id: 1, height: '300px',width:'250px'%>
-          </div>
 
-          
-          <div class = explain>
-            商品説明
-          </div>
-          <div class = "price">
-            105$
-          </div>
+          <% end %>
         
-        </div>
-        <div class = "kind">
-          <div class = itemImage>
-            <%=image_tag 'yukitorii1.jpg',id: 1, height: '300px',width:'250px'%>
-          </div>
-          
-          <div class = explain>
-            商品説明
-          </div>
-          <div class = "price">
-            105$
-          </div>
-        
-        </div>
-      </div>
-      <div class = "clothes">
-        <div class = "kind">
-          <div class = itemImage>
-            <%=image_tag 'yukitorii1.jpg',id: 1, height: '300px',width:'250px'%>
-          </div>
-          
-          <div class = explain>
-            商品説明
-          </div>
-          <div class = "price">
-            105$
-          </div>
-        </div>
-        <div class = "kind">
-          <div class = itemImage>
-            <%=image_tag 'yukitorii1.jpg',id: 1, height: '300px',width:'250px'%>
-          </div>
-          
-          <div class = explain>
-            商品説明
-          </div>
-          <div class = "price">
-            105$
-          </div>
-        </div>
-        <div class = "kind">
-          <div class = itemImage>
-            <%=image_tag 'yukitorii1.jpg',id: 1, height: '300px',width:'250px'%>
-          </div>
-          
-          <div class = explain>
-            商品説明
-          </div>
-          <div class = "price">
-            105$
-          </div>
-        </div>
+       
 
-      </div>
-      <div class = "clothes">
-        <div class = "kind">
-          <div class = itemImage>
-            <%=image_tag 'yukitorii1.jpg',id: 1, height: '300px',width:'250px'%>
-          </div>
-          
-          <div class = explain>
-            商品説明
-          </div>
-          <div class = "price">
-            105$
-          </div>
         </div>
-        <div class = "kind">
-          <div class = itemImage>
-            <%=image_tag 'yukitorii1.jpg',id: 1, height: '300px',width:'250px'%>
-          </div>
-          
-          <div class = explain>
-            商品説明
-          </div>
-          <div class = "price">
-            105$
-          </div>
-        </div>
-        <div class = "kind">
-          <div class = itemImage>
-            <%=image_tag 'yukitorii1.jpg',id: 1, height: '300px',width:'250px'%>
-          </div>
-          
-          <div class = explain>
-            商品説明
-          </div>
-          <div class = "price">
-            105$
-          </div>
-        </div>
-
       </div>
-      </div>
+    </div>
   
   </div>
-<% end %>
