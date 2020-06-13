@@ -1,32 +1,7 @@
-<div class = "title">
-  <div class = "itemsBox">
-    <div class = "clothes">
-      <div class = "kind">
-        <div class = itemImage>            
-        </div>
-        <div class = "name">
-          商品名
-        </div>
-        <div class = explain>
-          商品説明
-         
-        </div>
-
-        <div class = "price">
-          値段
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="itemsBox">
+  <p><%= product.name %></p>
+  <p><%= product.price %>円</p>
+  <% product.images.each do |image| %>
+    <%= image_tag image.src.url %>
+  <% end %>
 </div>
-
-
-<%# <%= image_tag image.src.url %> 
-<%# <% product.images.each do |image| %> 
-<%# <% end %> 
-
-
-<%# <%= product.name %>
-<p><%= product.price %>円</p>
-
- <p><%= product.explain %></p> %>
