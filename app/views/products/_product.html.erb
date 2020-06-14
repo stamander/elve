@@ -1,23 +1,22 @@
-<div class = Box>
-  <div class = "items_box" >
-    
-    <div class="items">
-      <% product.images.each do |image| %>
-      <div class = "clothes">
-        <%= image_tag image.src.url %>
-      </div>
-      <div class = "name">
-        <%= product.name %>
-      </div>
-      <div class = "explain">
-        <%= product.explain %>
-      </div>
-      <div class = "price">
-        <%= product.price %>円
-      </div>
 
-      <% end %>
-    </div> 
-    
-  </div>
+<div class = "items_box" >
+  
+  <div class="items">
+    <% product.images.each do |image| %>
+    <div class = "clothes">
+      <%= image_tag image.src.url %>
+    </div>
+    <div class = "name">
+      <%= product.name %>
+    </div>
+    <div class = "explain">
+      <%= product.explain %>
+    </div>
+    <div class = "price">
+      <%= product.price %>円
+    </div>
+
+    <% end %>
+  </div> 
+  
 </div>
