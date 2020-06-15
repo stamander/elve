@@ -41,16 +41,22 @@
 }
 
 .items{
+  width: 258px;
   float: left;
+  margin: 0 33px 20px 0;
+  border: solid 1px #EEE;
+  position: relative;
+  padding: 15px 20px;
+
 
 
 }
 
 
 .productsBox{
-  width: 1000px;
- 
-  margin: 100px auto;
+  margin-left: -33px;
+  margin-left: 0;
+  width: 100%;
   
   
 }
