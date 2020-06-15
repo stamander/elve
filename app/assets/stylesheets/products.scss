@@ -41,8 +41,7 @@
 }
 
 .items{
-  width: 500px;
-  float: left;
+
 
 }
 
@@ -50,5 +49,7 @@
 .productsBox{
   width: 1400px;
   display: flex;
+  margin: 100px auto;
+  justify-content: space-evenly;
   
 }
