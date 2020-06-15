@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'products#index'
+  root 'top#index'
   resources :top,only: :index
   resources :message,only: :index
   resources :shop
