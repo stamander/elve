@@ -1,7 +1,7 @@
 
 
   <div class="items">
-    <%= link_to 'Yahoo', 'http://www.yahoo.co.jp/' %>
+    <%= link_to 'Yahoo', product_path(id:product)%>
     <% product.images.each do |image| %>
     
       <%= image_tag image.src.url %>

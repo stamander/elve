@@ -1,6 +1,9 @@
-<div class = "show">
-  <%= product.name %>
-  <%= product.explain %>
-  <%= product.price %>
+<div class = "a">
+  <% @product.images.each do |image| %>
+    <%= image_tag image.src.url %>
+  <%end%>
+  <p><%= @product.name %></p>
+  <p><%= @product.explain %></p>
+  <p><%= @product.price %></p>
 
 </div>
