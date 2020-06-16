@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :shop
   resources :link, only: :index
   
-  resources :products, except: :show
+  resources :products
 end
