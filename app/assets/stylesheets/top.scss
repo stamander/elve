@@ -40,28 +40,27 @@
 
 .itemss{
 
-  width: 1400px;
-  height: 800px;
+  width: 1000px;
+ 
   font-size: 35px;
   font-family: 'Courier New', Courier, monospace;
-  margin: auto;
+  margin: 30px auto;
+  padding-bottom: 30px;
 
 
 
 
   .itemsss{
-    display: flex;
-    justify-content: space-evenly;
+
     padding-bottom: 50px;
-    text-align: end;
-    color: white;
-    font-size: 20px;
-    margin-left: 10px;
+
+    color: black;
+    font-size: 25px;
+
    
     .oyuki{
-      width: 500px;
-      height:300px;
-      background-color: coral;
+     
+
       
       
  
@@ -69,28 +68,20 @@
 
     }
     .jion{
-      width: 500px;
-      height:300px;
-      background-color: coral;
+      
     
     }
     .idem{
-      width: 400px;
-      height:300px;
-      background-color: coral;
+
       
     }
     .satto{
-      width: 400px;
-      height:300px;
-      background-color: coral;
+
      
     }
   
     .cool{
-      width: 400px;
-      height:300px;
-      background-color: coral;
+
       
     }
   }
