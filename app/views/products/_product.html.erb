@@ -1,12 +1,14 @@
 
 
   <div class="items">
+    <%= link_to 'Yahoo', 'http://www.yahoo.co.jp/' %>
     <% product.images.each do |image| %>
     
       <%= image_tag image.src.url %>
     
     <div class = "name">
       商品名：<%= product.name %>
+      
     </div>
     <div class = "explain">
       商品説明：<%= product.explain %>
