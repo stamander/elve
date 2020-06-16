@@ -1,9 +1,15 @@
-<div class = "a">
-  <% @product.images.each do |image| %>
-    <%= image_tag image.src.url %>
-  <%end%>
-  <p><%= @product.name %></p>
-  <p><%= @product.explain %></p>
-  <p><%= @product.price %></p>
+<div class = box>
+  
+  <div class = "a">
+    <% @product.images.each do |image| %>
+      <%= image_tag image.src.url %>
+    <%end%>
+    <p>商品名：<%= @product.name %></p>
+    <p>商品説明：<%= @product.explain %></p>
+    <p>商品価格：<%= @product.price %></p>
+  </div>
 
+  <%=link_to "購入画面へ","http://www.yahoo.co.jp/"%>
+  
 </div>
+  
