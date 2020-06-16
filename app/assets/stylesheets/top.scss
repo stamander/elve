@@ -98,11 +98,13 @@
       
     }
 
-    .fotos{
-      background-color: olive;
-      width: 200px;
-      height: 200px;
-    }
+
+  }
+  .fotos{
+    display:inline-flex;
+    background-color: olive;
+    width: 150px;
+    height: 200px;
   }
   
 }
