@@ -1,0 +1,20 @@
+
+
+
+= form_tag(action: :pay, method: :post) do
+  :plain
+  %script{type: "text/javascript", src: "https://checkout.pay.jp", class:"payjp-button", "data-text": "購入する", "data-key": "pk_test_f64e59fe273594de973da4c0"}
+
+
+
+.a
+  - @product.images.each do |image|
+    = image_tag image.src.url
+    %p
+      商品名：#{@product.name}
+    %p
+      商品説明：#{@product.explain}
+    %p
+      商品価格：#{@product.price}
+
+
