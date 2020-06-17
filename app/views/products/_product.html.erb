@@ -1,7 +1,7 @@
 
 
   <div class="items">
-    <%= link_to 'Yahoo', product_path(id:product)%>
+    
     <% product.images.each do |image| %>
     
       <%= image_tag image.src.url %>
@@ -16,6 +16,7 @@
     <div class = "price">
       ¥<%= product.price %>
     </div>
+    <%= link_to '詳しく見る', product_path(id:product)%>
 
     <% end %>
   </div> 
