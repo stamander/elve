@@ -7,12 +7,12 @@
     <p>商品名：<%= @product.name %></p>
     <p>商品説明：<%= @product.explain %></p>
     <p>商品価格：<%= @product.price %></p>
-
+    <%=link_to "購入画面へ","http://www.yahoo.co.jp/"%>
+    <%=link_to "戻る",products_path%>
   </div>
 </div>
 <div class = "buy">
-  <%=link_to "購入画面へ","http://www.yahoo.co.jp/"%>
-  <%=link_to "戻る",products_path%>
+
 </div>
   
 
