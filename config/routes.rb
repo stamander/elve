@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
 
-  root 'users#index'
+  root 'top#index'
   
   resources :top,only: :index
   resources :message,only: :index
