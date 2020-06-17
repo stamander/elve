@@ -72,4 +72,8 @@ gem 'pry-rails'
 
 gem 'payjp'
 
- gem 'haml-rails'
+gem 'haml-rails'
+
+gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
