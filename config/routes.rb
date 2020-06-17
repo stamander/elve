@@ -8,5 +8,10 @@ Rails.application.routes.draw do
   
   resources :products
 
-  resources :cards
+  resources :cards, only: [:index] do
+    collection do
+      post 'purchase', to: 'cards#purchase'
+    end
+  end
+
 end
