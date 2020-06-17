@@ -12,10 +12,10 @@ class ShopController < ApplicationController
   def create
     @shop= Shop.new(shop_params)
     if @shop.save
-      redirect_to shop_index_path
+      redirect_to products_path
    
     else
-      redirect_to shop_index_path
+      redirect_to products_path
       
       
     end
