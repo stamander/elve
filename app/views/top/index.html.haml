@@ -1,0 +1,38 @@
+%body
+  .image
+    .imageBox
+      #yuki.yukiTorii
+        = image_tag 'yukitorii1.jpg',id: 1
+        = image_tag 'yukitorii2.jpg',id: 2
+        = image_tag 'yukitorii3.jpg',id: 3
+      = image_tag 'top.JPG'
+      = image_tag 'top2.JPG'
+  .itemss
+    Blands
+    .itemsss
+      .oyuki
+        YUKI TORII
+      .hanae_Mori
+        HANAEMORI
+      .idem
+        IDEM
+      .jion
+        ㈱ジオン商事Chamois
+      .satto
+        サットナーム
+      .nubel
+        nubel
+    .fotos
+    .fotos
+    .fotos
+    .fotos
+    .fotos
+    .fotos
+:javascript
+  $(function() {
+    $(".imageBox").not('.slick-initialized').slick({
+      autoplay:true,
+      arrows:false,
+      dots:true
+    });
+  });

@@ -1,0 +1,21 @@
+%head
+  %title B_Eleve
+  = csrf_meta_tags
+  = csp_meta_tag
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+  = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %link{:href => "slick.scss", :media => "screen", :rel => "stylesheet", :type => "text/scss"}/
+  %link{:href => "slick-theme.scss", :media => "screen", :rel => "stylesheet", :type => "text/scss"}/
+  %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+  %script{:src => "slick.min.js"}
+%body
+  .wrapper
+    .headBox
+      .whiteBox
+        .font
+          = link_to (image_tag 'rogo.jpg',class:'rogo'),root_path
+          %ul= link_to "message", message_index_path ,class:'consept'
+          %ul= link_to "shop", products_path ,class:'consept'
+          %ul= link_to "access&link", link_index_path ,class:'consept'
+          %ul= link_to "private", new_product_path,class:'consept'
+    = yield

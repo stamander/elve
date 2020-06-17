@@ -1,0 +1,12 @@
+.box
+  .a
+    - @product.images.each do |image|
+      = image_tag image.src.url
+    %p
+      商品名：#{@product.name}
+    %p
+      商品説明：#{@product.explain}
+    %p
+      商品価格：#{@product.price}
+    = link_to "購入画面へ",new_shop_path
+    = link_to "戻る",products_path

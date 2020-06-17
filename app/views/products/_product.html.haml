@@ -1,0 +1,10 @@
+.items
+  - product.images.each do |image|
+    = image_tag image.src.url
+    .name
+      商品名：#{product.name}
+    .explain
+      商品説明：#{product.explain}
+    .price
+      ¥#{product.price}
+    = link_to '詳しく見る', product_path(id:product)
