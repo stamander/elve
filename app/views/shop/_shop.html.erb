@@ -8,9 +8,9 @@
   郵便番号<%= f.text_field :adress_number %><br>
   住所<%= f.text_field :adress %><br>
 
-  <form action="/pay" method="post">
-    <script src="https://checkout.pay.jp/" class="payjp-button" data-key=""></script>
-  </form>
+<%= form_with url: purchase_item_path do%>=
+ 
+    <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_f64e59fe273594de973da4c0"></script>
 
 
   <%= f.submit %>
