@@ -5,6 +5,8 @@ class CreateShops < ActiveRecord::Migration[5.2]
       t.string :kana,null: false
       t.string :phone_number,null: false
       t.string :mail,null: false
+      t.string :adress_number,null:false
+      t.string :adress,null:false 
 
       t.timestamps
     end

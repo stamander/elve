@@ -29,7 +29,7 @@ class ShopController < ApplicationController
 
   private
   def shop_params
-    params.require(:shop).permit(:name,:kana,:phone_number,:mail)
+    params.require(:shop).permit(:name,:kana,:phone_number,:mail,:adress_number,:adress)
   end
 
 end
