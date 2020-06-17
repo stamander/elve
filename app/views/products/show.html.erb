@@ -9,7 +9,11 @@
     <p>商品価格：<%= @product.price %></p>
   </div>
 
-  <%=link_to "購入画面へ","http://www.yahoo.co.jp/"%>
-  
+
 </div>
+
+  <%= link_to 'Yahoo', 'http://www.yahoo.co.jp/' %>
+
+  <%=link_to "購入画面へ","http://www.yahoo.co.jp/"%>
+  <%=link_to "戻る",products_path%>
   
