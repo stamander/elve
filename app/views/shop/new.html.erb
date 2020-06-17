@@ -1,9 +1,9 @@
 <%= form_for @shop,url:shop_index_path,local:true  do |f| %>
 
-  商品名<%= f.text_field :name %><br>
-  価格<%= f.number_field :kana %><br>
-  商品説明<%= f.text_field :phone_number %><br>
-  商品説明<%= f.text_field :mail %><br>
+  お名前<%= f.text_field :name %><br>
+  カナ<%= f.number_field :kana %><br>
+  電話番号<%= f.text_field :phone_number %><br>
+  メールアドレス<%= f.text_field :mail %><br>
 
 
   <%= f.submit %>
