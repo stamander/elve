@@ -10,8 +10,8 @@ class ShopController < ApplicationController
   end
 
   def create
-    @exhibition= Exhibition.new(exhibition_params)
-    if @exhibition.save
+    @shop= Shop.new(shop_params)
+    if @shop.save
       redirect_to shop_index_path
    
     else
