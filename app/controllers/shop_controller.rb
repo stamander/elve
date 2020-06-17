@@ -15,7 +15,7 @@ class ShopController < ApplicationController
   def create
     @shop= Shop.new(shop_params)
     if @shop.save
-      redirect_to cards_path
+      redirect_to products_path
    
     else
       redirect_to products_path
