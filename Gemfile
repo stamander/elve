@@ -71,3 +71,5 @@ gem 'mini_magick'
 gem 'pry-rails'
 
 gem 'payjp'
+
+ gem 'haml-rails'
