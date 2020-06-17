@@ -28,8 +28,8 @@ class ShopController < ApplicationController
 
 
   private
-  def exhibition_params
-    params.require(:exhibition).permit(:name,:price,:explain,images_attributes: [:src])
+  def shop_params
+    params.require(:shop).permit(:name,:kana,:phone_number,:mail)
   end
 
 end
