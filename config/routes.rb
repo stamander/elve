@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :link, only: :index
   
   resources :products
+
+  resources :cards
 end
