@@ -57,7 +57,7 @@ class ProductsController < ApplicationController
   end
 
 
-  def dobe
+  def done
   end
 
 
