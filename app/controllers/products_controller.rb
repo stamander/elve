@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!
 
   before_action :set_product, only: [:show, :purchase, :pay]
 
@@ -56,7 +57,7 @@ class ProductsController < ApplicationController
   end
 
 
-  def dobe
+  def done
   end
 
 

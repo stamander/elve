@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'users/index'
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
+
   root 'top#index'
   
   resources :top,only: :index
@@ -15,6 +20,9 @@ Rails.application.routes.draw do
       get  'done'=>      'products#done', as: 'done'
     end
   end
+
+
+  
 
 
 
