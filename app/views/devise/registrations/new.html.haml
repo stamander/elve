@@ -6,10 +6,22 @@
     = f.label :name
     %br/
     = f.text_field :name, autofocus: true
+
   .field
-    = f.label :age
+    = f.label :kana
     %br/
-    = f.number_field :age
+    = f.text_field :kana, autofocus: true
+
+
+  .field
+    = f.label :adressNumber
+    %br/
+    = f.text_field :adressNumber, autofocus: true
+
+  .field
+    = f.label :adress
+    %br/
+    = f.text_field :adress, autofocus: true
 
   .field
     = f.label :email
