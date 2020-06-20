@@ -3,23 +3,27 @@
   = render "devise/shared/error_messages", resource: resource
 
   .field
+    お名前
     = f.label :name
     %br/
     = f.text_field :name, autofocus: true
 
   .field
+    カナ
     = f.label :kana
     %br/
     = f.text_field :kana, autofocus: true
 
 
   .field
+    郵便番号
     = f.label :adressNumber
     %br/
     = f.text_field :adressNumber, autofocus: true
 
-  .field
-    = f.label :adress
+  .field 
+    住所
+    = f.label :adress 
     %br/
     = f.text_field :adress, autofocus: true
 
