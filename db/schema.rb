@@ -13,10 +13,10 @@
 ActiveRecord::Schema.define(version: 2020_06_19_102420) do
 
   create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "shops_id", null: false
+    t.integer "user_id", null: false
+    t.string "card_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["shops_id"], name: "index_cards_on_shops_id"
   end
 
   create_table "exhibitions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -59,8 +59,7 @@ ActiveRecord::Schema.define(version: 2020_06_19_102420) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
-    t.string "age"
+    t.string "name", null: false
     t.string "kana", null: false
     t.integer "adressNumber", null: false
     t.string "adress", null: false
