@@ -1,7 +1,8 @@
 class CreateCards < ActiveRecord::Migration[5.2]
   def change
     create_table :cards do |t|
-      t.references :shops,null:false
+      t.integer :user_id, null: false
+      t.string :card_id, null: false
 
       t.timestamps
     end

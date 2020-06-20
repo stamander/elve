@@ -5,12 +5,17 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.includes(:images)
+    
+    
+
   end
 
  
   def new
     @product = Product.new
     @product.images.new
+    @users = User.select("")
+    @products = Product.select("name")
   end
 
 
@@ -53,7 +58,8 @@ class ProductsController < ApplicationController
       
     )
 
-    redirect_to action: :done
+    redirect_to root_path
+
   end
 
 
@@ -68,7 +74,7 @@ private
   end
 
 def product_params
-  params.require(:product).permit(:name, :price,:explain, images_attributes: [:src])
+  params.require(:product).permit(:name, :price,:explain, images_attributes: [:src]).merge(user_id: current_user.id)
 end
 
 
