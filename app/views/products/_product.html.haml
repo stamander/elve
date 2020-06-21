@@ -1,7 +1,4 @@
--if product.shop_id.present? 
-  .items-box_photo__sold
-    .items-box_photo__sold__inner
-      SOLD
+
 
 .items
   - product.images.each do |image|
@@ -11,5 +8,8 @@
     .explain
       商品説明：#{product.explain}
     .price
-      ¥#{product.price}
+      ¥ #{product.price}
+    .number
+      商品番号（※商品を購入する際、必ず必要になるため、控えておいてください）
+       ¥ #{product.number}
     = link_to '詳しく見る', product_path(id:product)

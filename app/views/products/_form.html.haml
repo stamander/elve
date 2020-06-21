@@ -5,6 +5,9 @@
   %br/
   商品説明#{f.text_field :explain}
   %br/
+  商品番号#{f.text_field :number}
+
+  %br/
   = f.fields_for :images do |i|
     = i.file_field :src
     %br/

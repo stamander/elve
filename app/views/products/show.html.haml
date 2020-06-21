@@ -8,5 +8,7 @@
       商品説明：#{@product.explain}
     %p
       商品価格：#{@product.price}
+    %p
+      商品価格：#{@product.number}
     = link_to "購入画面へ", purchase_products_path
     = link_to "戻る",products_path

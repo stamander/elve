@@ -15,13 +15,13 @@ class ProductsController < ApplicationController
     
     @product = Product.new
     @product.images.new
-    @users = User.select("")
-    @products = Product.select("name")
+
   end
 
 
   def create
     @product = Product.new(product_params)
+  
     if @product.save
       redirect_to root_path
     else
@@ -67,8 +67,6 @@ class ProductsController < ApplicationController
 
 
   def done
-    @product= Product.find(params[:id])
-    @product.update( shops: current_user.id)
   end
 
 
@@ -79,7 +77,7 @@ private
   end
 
 def product_params
-  params.require(:product).permit(:name, :price,:explain, images_attributes: [:src])
+  params.require(:product).permit(:name, :price,:explain,:number, images_attributes: [:src])
 end
 
 

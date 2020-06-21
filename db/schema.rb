@@ -36,10 +36,9 @@ ActiveRecord::Schema.define(version: 2020_06_19_102420) do
     t.string "name"
     t.integer "price"
     t.string "explain"
-    t.bigint "shops_id"
+    t.integer "number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["shops_id"], name: "index_products_on_shops_id"
   end
 
   create_table "shops", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -70,5 +69,4 @@ ActiveRecord::Schema.define(version: 2020_06_19_102420) do
   end
 
   add_foreign_key "images", "products"
-  add_foreign_key "products", "shops", column: "shops_id"
 end

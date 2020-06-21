@@ -1,5 +1,4 @@
 class Shop < ApplicationRecord
-  belongs_to :product_id
 
   validates :name, presence: true
   validates :kana, presence: true
