@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2020_06_19_102420) do
     t.string "mail", null: false
     t.string "adress_number", null: false
     t.string "adress", null: false
+    t.string "number", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

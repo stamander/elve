@@ -8,8 +8,7 @@
     .explain
       商品説明：#{product.explain}
     .price
-      ¥ #{product.price}
-    .number
-      商品番号（※商品を購入する際、必ず必要になるため、控えておいてください）
-       ¥ #{product.number}
+      価格：¥ #{product.price}
+
+    %br
     = link_to '詳しく見る', product_path(id:product)

@@ -17,10 +17,11 @@ class ShopController < ApplicationController
   def create
     @shop= Shop.new(shop_params)
     if @shop.save
-      redirect_to products_path,notice: 'お間違いないですか？'
+      redirect_to root_path
    
     else
-      redirect_to products_path
+      flash[:danger] = "まだ未入力のものがあります"
+      redirect_to new_shop_path
       
       
     end
@@ -40,7 +41,7 @@ class ShopController < ApplicationController
 
   private
   def shop_params
-    params.require(:shop).permit(:name,:kana,:phone_number,:mail,:adress_number,:adress)
+    params.require(:shop).permit(:name,:kana,:phone_number,:mail,:adress_number,:adress,:number)
   end
 
 end

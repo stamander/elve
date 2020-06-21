@@ -7,8 +7,8 @@
     %p
       商品説明：#{@product.explain}
     %p
-      商品価格：#{@product.price}
+      商品価格：¥#{@product.price}
     %p
-      商品価格：#{@product.number}
-    = link_to "購入画面へ", purchase_products_path
+      商品番号：#{@product.number}番（※商品を購入する際、必ず必要になるため、控えておいてください）
+    = link_to "購入画面へ", purchase_products_path,data: { confirm: '商品番号は控えましたか？' }
     = link_to "戻る",products_path
