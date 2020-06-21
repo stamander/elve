@@ -61,7 +61,7 @@ class ProductsController < ApplicationController
       
     )
 
-    redirect_to action: :done
+    redirect_to new_shop_path
 
   end
 
