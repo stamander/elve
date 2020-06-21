@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
-  before_action :authenticate_user!
 
+  before_action :basic_auth,only: [:new,:destroy]
   before_action :set_product, only: [:show, :purchase, :pay]
 
   def index
@@ -12,6 +12,7 @@ class ProductsController < ApplicationController
 
  
   def new
+    
     @product = Product.new
     @product.images.new
     @users = User.select("")
@@ -44,7 +45,9 @@ class ProductsController < ApplicationController
     @product.destroy
     redirect_to root_path
   end
-
+  def purchase
+    :authenticate_user!
+  end
 
 
 
@@ -58,7 +61,7 @@ class ProductsController < ApplicationController
       
     )
 
-    redirect_to root_path
+    redirect_to action: :done
 
   end
 
@@ -76,6 +79,14 @@ private
 def product_params
   params.require(:product).permit(:name, :price,:explain, images_attributes: [:src]).merge(user_id: current_user.id)
 end
+
+
+def basic_auth
+  authenticate_or_request_with_http_basic do |username, password|
+    username == 'admin' && password == '2222'
+  end
+end
+
 
 
 end

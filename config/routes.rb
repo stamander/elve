@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     collection do
       get  'purchase/:id'=>  'products#purchase', as: 'purchase'
       post 'pay/:id'=>   'products#pay', as: 'pay'#httpメソッドはpostなので注意
-      get  'done'=>      'products#done', as: 'done'
+      get  'done/:id'=>      'products#done', as: 'done'
     end
   end
 
