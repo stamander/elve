@@ -46,7 +46,7 @@ class ProductsController < ApplicationController
     redirect_to root_path
   end
   def purchase
-    :authenticate_user!
+    # :authenticate_user!
   end
 
 
@@ -67,6 +67,8 @@ class ProductsController < ApplicationController
 
 
   def done
+    @product= Product.find(params[:id])
+    @product.update( shops: current_user.id)
   end
 
 
@@ -77,7 +79,7 @@ private
   end
 
 def product_params
-  params.require(:product).permit(:name, :price,:explain, images_attributes: [:src]).merge(user_id: current_user.id)
+  params.require(:product).permit(:name, :price,:explain, images_attributes: [:src])
 end
 
 
