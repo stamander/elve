@@ -9,6 +9,10 @@
       商品説明：#{product.explain}
     .price
       価格：¥ #{product.price}
+    .number
+      商品番号：#{product.number}番
 
+    -if user_signed_in?
+      = link_to '削除', product_path(product.id), method: :delete, class:"delete"
     %br
     = link_to '詳しく見る', product_path(id:product)

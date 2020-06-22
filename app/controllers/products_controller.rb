@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
 
-  before_action :basic_auth,only: [:new,:destroy]
+  before_action :basic_auth,only: [:new]
   before_action :set_product, only: [:show, :purchase, :pay]
 
   def index
@@ -42,6 +42,8 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    
+    @product = Product.find_by(id:params[:id])
     @product.destroy
     redirect_to root_path
   end
