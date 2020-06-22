@@ -16,11 +16,13 @@ class ShopController < ApplicationController
 
   def create
     @shop= Shop.new(shop_params)
+  
     if @shop.save
-      redirect_to root_path
+      flash[:denger] = "ありがとうございます。商品を承りました"
+      redirect_to new_shop_path
    
     else
-      flash[:danger] = "まだ未入力のものがあります"
+      flash[:denger] = "まだ未入力のものがあります"
       redirect_to new_shop_path
       
       

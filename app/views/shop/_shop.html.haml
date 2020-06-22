@@ -1,4 +1,6 @@
-= flash[:danger]
+.flash
+  = flash[:denger]
+  
 = form_for @shop,url:shop_index_path,local:true  do |f|
   お名前#{f.text_field :name}
   %br/
@@ -12,6 +14,6 @@
   %br/
   住所#{f.text_field :adress}
   %br/
-  商品番号#{f.text_field :adress}
+  商品番号#{f.text_field :number}
   %br/
-  = f.submit "確定する",class:"send",data: { confirm: 'ありがとうございます。ご注文を承りました' }
+  = f.submit "確定する",class:"send"
