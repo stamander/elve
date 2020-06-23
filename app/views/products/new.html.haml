@@ -3,3 +3,7 @@
 
 
 =link_to '購入者情報',shop_index_path
+- if user_signed_in?
+  %ul= link_to "logout", destroy_user_session_path, method: :delete,class:'cast'
+- else
+  %ul= link_to "rogin", new_user_session_path, method: :get,class:'cast'

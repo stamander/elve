@@ -17,11 +17,10 @@
           %ul= link_to "message", message_index_path ,class:'consept'
           %ul= link_to "shop", products_path ,class:'consept'
           %ul= link_to "access&link", link_index_path ,class:'consept'
-          %ul= link_to "private", new_product_path,class:'consept'
-          - if user_signed_in?
-            %ul= link_to "logout", destroy_user_session_path, method: :delete,class:'consept'
-          - else
-            %ul= link_to "rogin", new_user_session_path, method: :get,class:'consept'
+          .casts 
+            .cc cast only
+            %ul= link_to "private", new_product_path,class:'cast'
+
           
     
     = yield

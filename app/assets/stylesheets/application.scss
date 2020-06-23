@@ -13,6 +13,18 @@
   position: relative;/*←相対位置*/
   padding-bottom: 120px;/*←footerの高さ*/
   box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+  width: 1440px;
+  .footer{
+    background-color: black;
+    height: 30px;
+    width: 1440px;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+  
+    position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+  }
 }
 
 
@@ -36,6 +48,10 @@
   margin-left: 100px;
 }
 
+.consept{
+  color: black;
+}
+
 .font{
   display: flex;
   
@@ -46,17 +62,27 @@
   font-size: 30px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   padding: 30px 0px;
+ 
 }
 
 
-footer{
-  background-color: black;
-  height: 30px;
-  width: 1440px;
-  color: white;
-  text-align: center;
-  padding: 30px 0;
 
-  position: absolute;/*←絶対位置*/
-  bottom: 0; /*下に固定*/
+.casts{
+  display: flex;
+  right: 0;
+  text-align: right;
+  margin-left: 100px;
+  width: 600px;
+  
+}
+
+.cast{
+
+  font-size: 15px;
+  color: black;
+}
+
+.cc{
+  font-size: 10px;
+  width: 200px;
 }
