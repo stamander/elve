@@ -11,10 +11,13 @@
 
 
 }
-.imageBox{
+
+
+.slider{
   height: 500px;
   width: 1000px;
   margin: 20px auto;
+  
   .topimg{
     text-align: center;
   }
@@ -28,13 +31,24 @@
 
 }
 
-.yukiTorii{
+#slick-slide00{
   display: flex;
+  
   
 }
 
 #shoues{
   height: 470px;
+}
+
+.photoimg{
+  text-align: center;
+}
+
+.slider img{
+  text-align: center;
+  margin: auto;
+  
 }
 
 

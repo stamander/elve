@@ -4,7 +4,7 @@
   .title
     Boutique Elevee
   .image
-    .imageBox
+    .slider
       #yuki.yukiTorii
         = image_tag "yukitorii1.jpg",id: 1
         = image_tag "yukitorii2.jpg",id: 2
@@ -40,10 +40,3 @@
     .photos
     .photos
 :javascript
-  jQuery(function($) {
-    $(".imageBox").not('.slick-initialized').slick({
-      autoplay:true,
-      arrows:false,
-      dots:true
-    });
-  });
