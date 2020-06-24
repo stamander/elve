@@ -7,10 +7,15 @@
     商品説明：#{@product.explain}
   %p
     商品価格：¥#{@product.price}
-  %p
-    商品番号：#{@product.number}番（※商品を購入する際、必ず必要になるため、控えておいてください）
+  %p 商品番号：#{@product.number}番
+  %h5（※商品番号は商品を購入する際、必ず必要になるため、控えておいてください。また、商品をご購入後、お届け先のご入力となります）
+  %h5（※入力時の不備があったさいは責任をおいかねます）
 
-    %br
+
+  %br
     .choice
-      = link_to "購入画面へ", purchase_products_path,data: { confirm: '商品番号は控えましたか？' },class:"consept"
+      = link_to "購入画面へ", purchase_products_path,data: { confirm: '商品番号は控えましたか？お客様自身の入力時の不備があったさいの責任は負いかねますのでご了承ください' },class:"consept"
       = link_to "戻る",products_path,class:"consept"
+
+
+
