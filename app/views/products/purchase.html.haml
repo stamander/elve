@@ -1,5 +1,5 @@
 
-.items
+.item_s
   .a
     - @product.images.each do |image|
       = image_tag image.src.url
@@ -15,6 +15,8 @@
   .a
   = form_tag(action: :pay, method: :post) do
     :plain
-  %script{type: "text/javascript", src: "https://checkout.pay.jp", class:"payjp-button", "data-text": "購入する", "data-key": "pk_test_6c62395ff5328b141cf685a4"}
+    %script{type: "text/javascript", src: "https://checkout.pay.jp", class:"payjp-button", "data-text": "購入する", "data-key": "pk_test_6c62395ff5328b141cf685a4"}
+
+
 
 

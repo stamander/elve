@@ -49,13 +49,32 @@
 
 .items{
   font-size: 20px;
+  margin: 20px;
+  
+
+}
+
+
+.name{
+  text-decoration: none;
+  color: black;
+
+}
+
+.item_s{
+  font-size: 20px;
+}
+
+.items:hover{
+  background-color: rgba($color: #443d3d, $alpha: 0.1);
 }
 
 
 .a{
   width: 1000px;
   text-align: center;
-  margin: 0 200px;
+  margin: 30 200px;
+
 }
 
 

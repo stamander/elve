@@ -1,16 +1,16 @@
 
-
-.items
-  - product.images.each do |image|
-    = image_tag image.src.url
-    .name
-      商品名：#{product.name}
-    .explain
-      商品説明：#{product.explain}
-    .price
-      価格：¥ #{product.price}
-    .number
-      商品番号：#{product.number}番
+= link_to product_path(id:product), target: "_blank",class:"name" do
+  .items
+    - product.images.each do |image|
+      = image_tag image.src.url
+      .name
+        商品名：#{product.name}
+      .explain
+        商品説明：#{product.explain}
+      .price
+        価格：¥ #{product.price}
+      .number
+        商品番号：#{product.number}番
 
     -if user_signed_in?
       = link_to '削除', product_path(product.id), method: :delete, class:"delete"

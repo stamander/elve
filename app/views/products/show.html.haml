@@ -1,15 +1,14 @@
 .box
-  .a
-    - @product.images.each do |image|
-      = image_tag image.src.url
-    %p
-      商品名：#{@product.name}
-    %p
-      商品説明：#{@product.explain}
-    %p
-      商品価格：¥#{@product.price}
-    %p
-      商品番号：#{@product.number}番（※商品を購入する際、必ず必要になるため、控えておいてください）
+  - @product.images.each do |image|
+    = image_tag image.src.url
+  %p
+    商品名：#{@product.name}
+  %p
+    商品説明：#{@product.explain}
+  %p
+    商品価格：¥#{@product.price}
+  %p
+    商品番号：#{@product.number}番（※商品を購入する際、必ず必要になるため、控えておいてください）
 
     %br
     .choice
