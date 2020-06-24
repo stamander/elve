@@ -47,8 +47,30 @@
   font-size: 25px;
 }
 
-
-.a{
-  position: absolute;
+.items{
+  font-size: 20px;
 }
 
+
+.a{
+  width: 1000px;
+  text-align: center;
+  margin: 0 200px;
+}
+
+
+.choice{
+  display: flex;
+  justify-content: space-between;
+}
+
+#payjp_checkout_box{
+  margin: auto;
+  text-align: center;
+  width: 500px;
+  height: 300px;
+}
+
+.ab{
+  text-align: left;
+}
