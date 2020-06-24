@@ -2,18 +2,33 @@
   = flash[:denger]
   
 = form_for @shop,url:shop_index_path,local:true  do |f|
-  お名前#{f.text_field :name}
+  .name_1
+    お名前
+    = f.text_field :name, placeholder: "※必須　ex.山田太郎"
   %br/
-  カナ#{f.text_field :kana}
+  .kana_1
+    カナ
+    = f.text_field :kana, placeholder: "※必須　ex.ヤマダタロウlace"
   %br/
-  電話番号#{f.text_field :phone_number}
+  .number_1
+    電話番号
+    = f.text_field :phone_number, placeholder: "※必須　ex.080000000"
   %br/
-  メールアドレス#{f.text_field :mail}
+  .mail_1
+    メールアドレス
+  
+    = f.text_field :mail, placeholder: "※必須　ex.elve@gmail.com"
   %br/
-  郵便番号#{f.text_field :adress_number}
+  .adress_number_1
+    郵便番号
+    = f.text_field :adress_number, placeholder: "※必須　ex300-0000"
   %br/
-  住所#{f.text_field :adress}
+  .adress_1
+    住所
+    = f.text_field  :adress, placeholder: "※必須　ex.栃木県足利市2000-00 マンション名 105"
   %br/
-  商品番号#{f.text_field :number}
+  .number_1
+    商品番号
+    = f.text_field :number, placeholder: "※必須　ex.4"
   %br/
   = f.submit "確定する",class:"send"
