@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
 
-  
+  before_action :basic_auth,only: [:new]
   before_action :set_product, only: [:show, :purchase, :pay]
 
   def index
@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
 
  
   def new
-    http_basic_authenticate_with name: 'name', password: 'password'
+    
     @product = Product.new
     @product.images.new
 
@@ -85,8 +85,8 @@ end
 
 
 def basic_auth
- 
-  http_basic_authenticate_with name: ENV['BASIC_AUTH_USERNAME'], password: ENV['BASIC_AUTH_PASSWORD'] if Rails.env.production?
+
+  http_basic_authenticate_with :name => ENV['BASIC_AUTH_USERNAME'], :password => ENV['BASIC_AUTH_PASSWORD'] if Rails.env == "production"
     
   
 end
