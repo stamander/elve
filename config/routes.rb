@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :message,only: :index
   resources :shop
   resources :link, only: :index
+  resources :card, only: :index
 
   
   resources :products

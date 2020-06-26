@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
 
  
   def new
-    http_basic_authenticate_with name: ENV['BASIC_AUTH_USERNAME'], password: ENV['BASIC_AUTH_PASSWORD'] if Rails.env.production?
+    
     @product = Product.new
     @product.images.new
 
@@ -82,7 +82,6 @@ private
 def product_params
   params.require(:product).permit(:name, :price,:explain,:number, images_attributes: [:src])
 end
-
 
 
 
