@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
 
-  before_action :basic_auth,only: [:new]
+  
   before_action :set_product, only: [:show, :purchase, :pay]
 
   def index
@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
 
  
   def new
-    
+    http_basic_authenticate_with name: 'name', password: 'password'
     @product = Product.new
     @product.images.new
 
