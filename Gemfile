@@ -79,4 +79,3 @@ gem 'devise-i18n'
 gem 'devise-i18n-views'
 
 gem "aws-sdk-s3", require: false 
-gem 'fog-aws'
