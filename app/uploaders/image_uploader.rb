@@ -5,15 +5,37 @@ class ImageUploader < CarrierWave::Uploader::Base
   process resize_to_fit: [300, 250] 
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
-  # storage :fog
+  if Rails.env.production?
+    storage :fog
+  else
+    storage :file
+  end
 
+  if Rails.env.production?
+    CarrierWave.configure do |config|
+      config.fog_credentials = {
+        # Amazon S3用の設定
+        :provider              => 'AWS',
+        :region                => ENV['S3_REGION'],  # S3に設定したリージョン。
+        :aws_access_key_id     => ENV['S3_ACCESS_KEY'],
+        :aws_secret_access_key => ENV['S3_SECRET_KEY']
+      }
+      config.fog_directory     =  ENV['S3_BUCKET']
+    end
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
+
+  def extension_whitelist
+    %w(jpg jpeg gif png)
+  end
+
+  def filename
+    original_filename if original_filename
+  end
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
   #   # For Rails 3.1+ asset pipeline compatibility:
