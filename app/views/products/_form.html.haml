@@ -1,9 +1,9 @@
 = form_for @product do |f|
   商品名#{f.text_field :name}
   %br/
-  価格#{f.number_field :price}
+  価格¥#{f.number_field :price}
   %br/
-  商品説明#{f.text_field :explain}
+  商品説明#{f.text_field :explain}（送料税込み）
   %br/
   商品番号#{f.text_field :number}
 
