@@ -45,7 +45,7 @@ class ProductsController < ApplicationController
     
     @product = Product.find_by(id:params[:id])
     @product.destroy
-    redirect_to root_path
+    redirect_to shop_index_path
   end
   def purchase
     
